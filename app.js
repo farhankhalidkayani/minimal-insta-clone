@@ -12,10 +12,10 @@ app.get("/ig/:username", (req, res) => {
   let data = require("./data.json");
 
   data = data[req.params.username];
-  console.log(data);
 
-  res.render("insta", { data });
+  if (data) {
+    res.render("insta", { data });
+  } else {
+    res.render("notFound");
+  }
 });
-// app.get("/:username", (req, res) => {
-//   console.log(req.params, req.query);
-// });
