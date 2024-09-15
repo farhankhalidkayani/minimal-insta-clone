@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= data.name %>'s Instagram</title>
+    <style>
+      /* General Styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #fafafa;
+        color: #333;
+      }
+
+      header {
+        background-color: #ffffff;
+        padding: 20px;
+        text-align: center;
+        border-bottom: 1px solid #dbdbdb;
+      }
+
+      h1 {
+        font-size: 24px;
+        margin: 0;
+        color: #333;
+      }
+
+      .profile {
+        width: 60%;
+        margin: 40px auto;
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #dbdbdb;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .profile-header {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      .profile-pic {
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        margin-right: 20px;
+        border: 2px solid #dbdbdb;
+      }
+
+      h2 {
+        font-size: 28px;
+        margin: 0;
+      }
+
+      .stats {
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      .stats ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .stats li {
+        font-size: 18px;
+        color: #333;
+      }
+
+      .bio {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        border: 1px solid #dbdbdb;
+        text-align: center;
+      }
+      /* Post Section */
+      .posts {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      .post {
+        border: 1px solid #dbdbdb;
+        border-radius: 5px;
+        overflow: hidden;
+        background-color: #fff;
+      }
+
+      .post img {
+        width: 100%;
+        height: auto;
+      }
+
+      .post-info {
+        padding: 10px;
+        text-align: center;
+        background-color: #fafafa;
+      }
+
+      .post-info p {
+        margin: 5px 0;
+        font-size: 16px;
+        color: #333;
+      }
+      footer {
+        text-align: center;
+        margin-top: 40px;
+        padding: 20px;
+        background-color: #ffffff;
+        border-top: 1px solid #dbdbdb;
+      }
+
+      footer p {
+        margin: 0;
+        font-size: 14px;
+        color: #999;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Instagram Profile</h1>
+    </header>
+
+    <section class="profile">
+      <div class="profile-header">
+        <img
+          src="https://via.placeholder.com/150"
+          alt="<%= data.name %>'s profile picture"
+          class="profile-pic"
+        />
+        <h2>@<%= data.name %></h2>
+      </div>
+
+      <div class="stats">
+        <ul>
+          <li><strong><%= data.posts.length %></strong> posts</li>
+          <li><strong><%= data.followers_count %></strong> followers</li>
+          <li><strong><%= data.following_count %></strong> following</li>
+        </ul>
+      </div>
+
+      <div class="bio">
+        <p>
+          This is <%= data.name %>'s bio. Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit.
+        </p>
+      </div>
+      <div class="posts">
+        <% data.posts.map((post)=>{ %>
+        <div class="post">
+          <img src="<%= post.image %>" alt="Post image" />
+          <div class="post-info">
+            <p><strong><%= post.likes %></strong> likes</p>
+            <p><strong><%= post.comments_count %></strong> comments</p>
+          </div>
+        </div>
+        <% }); %>
+      </div>
+    </section>
+
+    <footer>
+      <p>Instagram clone by Farhan</p>
+    </footer>
+  </body>
+</html>

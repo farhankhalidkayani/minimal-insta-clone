@@ -1,0 +1,53 @@
+{
+  "farhan": {
+    "name": "farhankhalid",
+    "followers_count": 350,
+    "following_count": 180,
+    "posts": [
+      {
+        "image": "https://via.placeholder.com/400",
+        "likes": 120,
+        "comments_count": 2
+      },
+      {
+        "image": "https://via.placeholder.com/400",
+        "likes": 98,
+        "comments_count": 1
+      }
+    ]
+  },
+  "mahad": {
+    "name": "mahadamin",
+    "followers_count": 450,
+    "following_count": 210,
+    "posts": [
+      {
+        "image": "https://via.placeholder.com/400",
+        "likes": 200,
+        "comments_count": 2
+      },
+      {
+        "image": "https://via.placeholder.com/400",
+        "likes": 150,
+        "comments_count": 1
+      }
+    ]
+  },
+  "mithu": {
+    "name": "mithu",
+    "followers_count": 220,
+    "following_count": 190,
+    "posts": [
+      {
+        "image": "https://via.placeholder.com/400",
+        "likes": 80,
+        "comments_count": 2
+      },
+      {
+        "image": "https://via.placeholder.com/400",
+        "likes": 65,
+        "comments_count": 1
+      }
+    ]
+  }
+}
